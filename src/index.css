@@ -1,13 +1,217 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f0f4f8;
+  color: #333;
+}
+
+/* Navbar */
+.navbar {
+  background: #1a1a2e;
+  padding: 16px 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-brand {
+  color: white;
+  font-size: 1.4rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.nav-links a {
+  color: rgba(255,255,255,0.85);
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.nav-links a:hover {
+  color: white;
+}
+
+.nav-links button {
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.4);
+  color: white;
+  padding: 6px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* Forms */
+.form-container {
+  max-width: 420px;
+  margin: 60px auto;
+  background: white;
+  padding: 36px;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form-container h2 {
+  font-size: 1.6rem;
+  color: #1a1a2e;
+}
+
+.form-container p {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.form-container input,
+.form-container textarea {
+  padding: 12px 16px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+  font-family: inherit;
+}
+
+.form-container input:focus,
+.form-container textarea:focus {
+  border-color: #1a56db;
+}
+
+.form-container button {
+  padding: 12px;
+  background: #1a56db;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.form-container button:hover {
+  background: #1446b8;
+}
+
+.form-container a {
+  color: #1a56db;
+}
+
+.error {
+  color: #e74c3c;
+  font-size: 0.9rem;
+}
+
+/* Dashboard */
+.dashboard {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.dashboard-header h2 {
+  font-size: 1.6rem;
+  color: #1a1a2e;
+}
+
+.dashboard-header div {
+  display: flex;
+  gap: 12px;
+}
+
+.dashboard-header button {
+  padding: 10px 20px;
+  background: #1a56db;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+
+.logout-btn {
+  background: transparent !important;
+  border: 1px solid #ddd !important;
+  color: #333 !important;
+}
+
+.trips-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.trip-card {
+  background: white;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.trip-card h3 {
+  font-size: 1.2rem;
+  color: #1a1a2e;
+}
+
+.trip-card p {
+  color: #555;
+  font-size: 0.9rem;
+}
+
+.itinerary {
+  background: #f8f9fa;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  white-space: pre-wrap;
+  color: #444;
+  font-family: inherit;
+}
+
+.delete-btn {
+  background: #fee2e2 !important;
+  color: #dc2626 !important;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  margin-top: 8px;
+}
+
+.no-trips {
+  text-align: center;
+  padding: 60px;
+  color: #666;
+}
+
+.no-trips button {
+  margin-top: 16px;
+  padding: 12px 24px;
+  background: #1a56db;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
 }
