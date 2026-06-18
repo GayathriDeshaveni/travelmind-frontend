@@ -24,12 +24,12 @@ function Login() {
 
   return (
     <div className="form-container">
-      <h2>Welcome to TravelMind</h2>
-      <p>Login to plan your trips</p>
+      <h2>Welcome to <span>TravelMind</span></h2>
+      <p>Login to plan your perfect trip</p>
       {error && <p className="error">{error}</p>}
       <input
         type="email"
-        placeholder="Email"
+        placeholder="Email address"
         value={email}
         onChange={e => setEmail(e.target.value)}
       />

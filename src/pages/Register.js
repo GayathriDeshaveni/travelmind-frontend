@@ -26,8 +26,8 @@ function Register() {
 
   return (
     <div className="form-container">
-      <h2>Create Account</h2>
-      <p>Start planning your dream trips</p>
+      <h2>Create your <span>account</span></h2>
+      <p>Start planning your dream trips today</p>
       {error && <p className="error">{error}</p>}
       <input
         type="text"
@@ -37,7 +37,7 @@ function Register() {
       />
       <input
         type="email"
-        placeholder="Email"
+        placeholder="Email address"
         value={email}
         onChange={e => setEmail(e.target.value)}
       />
@@ -47,7 +47,7 @@ function Register() {
         value={password}
         onChange={e => setPassword(e.target.value)}
       />
-      <button onClick={handleRegister}>Register</button>
+      <button onClick={handleRegister}>Create account</button>
       <p>Already have an account? <Link to="/login">Login</Link></p>
     </div>
   );

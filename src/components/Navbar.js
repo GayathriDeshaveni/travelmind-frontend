@@ -12,13 +12,15 @@ function Navbar() {
 
   return (
     <nav className="navbar">
-      <Link to="/" className="nav-brand">🌍 TravelMind</Link>
+      <Link to="/" className="nav-brand">
+        <span>✦</span> TravelMind
+      </Link>
       <div className="nav-links">
         {token ? (
           <>
             <Link to="/dashboard">Dashboard</Link>
             <Link to="/plan">Plan Trip</Link>
-            <button onClick={handleLogout}>Logout</button>
+            <button onClick={handleLogout}>Sign out</button>
           </>
         ) : (
           <>
