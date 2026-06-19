@@ -77,7 +77,7 @@ function PlanTrip() {
     try {
       setSaving(true);
       const token = localStorage.getItem('token');
-      await axios.post('http://localhost:5000/api/trips/save', {
+      await axios.post('https://travelmind-api.onrender.com/api/trips/save', {
         destination,
         startDate,
         endDate,

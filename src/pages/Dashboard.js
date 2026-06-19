@@ -30,7 +30,7 @@ function Dashboard() {
   const deleteTrip = async (id) => {
     try {
       const token = localStorage.getItem('token');
-      await axios.delete(`http://localhost:5000/api/trips/${id}`, {
+      await axios.delete(`https://travelmind-api.onrender.com/api/trips/${id}`, {
         headers: { Authorization: `Bearer ${token}` }
       });
       setTrips(trips.filter(trip => trip._id !== id));
