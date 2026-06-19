@@ -55,7 +55,7 @@ function PlanTrip() {
     setItinerary('');
     try {
       const token = localStorage.getItem('token');
-      const response = await axios.post('http://localhost:5000/api/ai/generate', {
+      const response = await axios.post('https://travelmind-api.onrender.com/api/ai/generate', {
         destination,
         startDate,
         endDate,

@@ -16,7 +16,7 @@ function Dashboard() {
   const fetchTrips = async () => {
     try {
       const token = localStorage.getItem('token');
-      const res = await axios.get('http://localhost:5000/api/trips/mytrips', {
+      const res = await axios.get('https://travelmind-api.onrender.com/api/trips/mytrips', {
         headers: { Authorization: `Bearer ${token}` }
       });
       setTrips(res.data);
