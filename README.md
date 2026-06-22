@@ -128,4 +128,3 @@ Deployed on **Vercel** (free tier):
 
 **Gayathri Deshaveni**
 - GitHub: [@GayathriDeshaveni](https://github.com/GayathriDeshaveni)
-- LinkedIn: [linkedin.com/in/gayathri-deshaveni](https://linkedin.com/in/gayathri-deshaveni)
