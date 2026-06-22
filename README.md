@@ -1,70 +1,131 @@
-# Getting Started with Create React App
+# TravelMind — Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The frontend for TravelMind, an AI-powered travel planning web application. Built with React.js and deployed on Vercel.
 
-## Available Scripts
+🌐 **Live App:** https://travelmind-frontend.vercel.app
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## ✨ Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- 🔐 User registration and login with JWT authentication
+- 📍 Enter destination, dates, budget and interests
+- 🤖 AI-generated day-by-day itinerary with accommodation, transport and budget breakdown
+- 💾 Save trips to your personal dashboard
+- 🗑️ Delete saved trips
+- 🌙 Premium dark UI design
+- 📱 Responsive layout
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## 🛠️ Tech Stack
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+| Layer | Technology |
+|-------|-----------|
+| Framework | React.js |
+| Routing | React Router v6 |
+| HTTP Client | Axios |
+| Styling | CSS3 (Custom dark theme) |
+| Deployment | Vercel |
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 📁 Project Structure
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```
+travelmind-frontend/
+├── public/
+├── src/
+│   ├── components/
+│   │   └── Navbar.js        # Navigation bar with auth state
+│   ├── pages/
+│   │   ├── Login.js         # Login page
+│   │   ├── Register.js      # Registration page
+│   │   ├── PlanTrip.js      # Trip planning form + itinerary display
+│   │   └── Dashboard.js     # Saved trips dashboard
+│   ├── App.js               # React Router setup
+│   ├── index.js             # Entry point
+│   └── index.css            # Global dark theme styles
+└── package.json
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## 📱 Pages
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Login & Register
+- Clean dark form UI
+- JWT token stored in localStorage
+- Redirects to dashboard on success
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Plan Trip (`/plan`)
+- Destination input
+- Date picker (start & end date)
+- Budget input with per-day calculation
+- Travelers selector
+- 20 interest tags (Beaches, Food, Adventure, Culture, etc.)
+- Generates complete itinerary via backend API
+- Shows stats: destination, duration, total budget
+- Save trip to dashboard
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Dashboard (`/dashboard`)
+- Welcome message with username
+- Grid of saved trip cards
+- Each card shows destination, dates, budget, interests and itinerary
+- Delete trip functionality
+- Plan new trip button
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+---
 
-## Learn More
+## 🚀 How to Run Locally
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Prerequisites
+- Node.js (v18+)
+- TravelMind backend running on port 5000
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Steps
 
-### Code Splitting
+```bash
+# 1. Clone the repository
+git clone https://github.com/GayathriDeshaveni/travelmind-frontend.git
+cd travelmind-frontend
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+# 2. Switch to premium UI branch
+git checkout premium-ui
 
-### Analyzing the Bundle Size
+# 3. Install dependencies
+npm install
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+# 4. Start the development server
+npm start
+```
 
-### Making a Progressive Web App
+App runs at `http://localhost:3000`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+> Make sure the backend is running at `http://localhost:5000` for local development.
+> For production, the app connects to `https://travelmind-api.onrender.com`
 
-### Advanced Configuration
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## 🌍 Deployment
 
-### Deployment
+Deployed on **Vercel** (free tier):
+- Connected to `premium-ui` branch on GitHub
+- Auto-deploys on every push
+- Backend API hosted separately on Render
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+---
 
-### `npm run build` fails to minify
+## 🔗 Related
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- 🔧 Backend Repository: [github.com/GayathriDeshaveni/travelmind](https://github.com/GayathriDeshaveni/travelmind)
+- 🌐 Live App: [travelmind-frontend.vercel.app](https://travelmind-frontend.vercel.app)
+- ⚙️ API: [travelmind-api.onrender.com](https://travelmind-api.onrender.com)
+
+---
+
+## 👩‍💻 Author
+
+**Gayathri Deshaveni**
+- GitHub: [@GayathriDeshaveni](https://github.com/GayathriDeshaveni)
+- LinkedIn: [linkedin.com/in/gayathri-deshaveni](https://linkedin.com/in/gayathri-deshaveni)
